@@ -1,0 +1,109 @@
+<html>
+
+<head>
+<title>Shadows over Las Vegas</title>
+<link rel="stylesheet" type="text/css" href="Pages/CSS/style.css"/>
+</head>
+
+<body style="background-color:black;">
+
+<h1 style="font-family:arial;color:red;font-size:40px;text-align:center;">Character Creation - Part 2: Bloodlines</h1>
+
+<img src="Images/Bloodlines.jpg" alt="Bloodlines" class="center" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
+
+<p> 
+<a style="font-family:arial;color:red;font-size:20px;">Your character will be born into a specific bloodline of Vampires. This bloodline defines the morphological traits of their vampiric condition and each bloodline also has their own unique culture.</a>
+</p>
+<p>
+<a style="font-family:arial;color:red;font-size:20px;">These bloodlines are: The Bestia, The Noctis, The Mortis and The Imperators. Each has their own unique powers and weaknesses that impact what choices are available or will be successful in the narrative.</a>
+</p>
+
+<p id="beast" style="display:none">
+<a style="font-family:arial;color:red;font-size:20px;">The Bestia: The Bestia are the origin of the archetype of the Vampire as a predator. They are naturally closer to the beast within and their powers and weakness shows that. They have the ability to take on aspects of animals, such as claws or enhanced eyes, and also have the ability to communicate with them. However their closeness to the beast means they have an even harder time controlling their bloodlust.</a>
+</p>
+
+<button type="button" onclick="document.getElementById('beast').style.display='block'">What are The Bestia?</button>
+
+<p id="noctis" style="display:none">
+<a style="font-family:arial;color:red;font-size:20px;">The Noctis: The Noctis are the origins of the imagery of Vampires being made of or capable of controlling shadows. An aristocratic bloodline that claims to hail from the abyss from before the earth was born. Their powers grant them control over shadows and the ability to summon strange creatures from the so-called "Abyss". However their weakness makes them weak to light of all sorts. Anything brighter than a candle can make it harder for them to use their powers.</a>
+</p>
+
+<button type="button" onclick="document.getElementById('noctis').style.display='block'">What are The Noctis?</button>
+
+<p id="necro" style="display:none">
+<a style="font-family:arial;color:red;font-size:20px;">The Mortem: The Mortem are masters of the art of Necromancy and have jealously guarded their secrets for millenia. They are capable of communing with and controlling the dead in a variety of ways and their bodies are highly resilient with the ability to form a dense bone-like armour to protect themselves. Their connection to the dead is shown in their weakness too. Their bites always kill through a variety of methods. Some can only tear chunks out of people with their fangs, some infect people with diseases when they feed, some inject people with a leathal venom etc. No matter the details their bite is almost always lethal no matter how little blood they drink.</a>
+</p>
+
+<button type="button" onclick="document.getElementById('necro').style.display='block'">What are The Mortem?</button>
+
+<p id="imperial" style="display:none">
+<a style="font-family:arial;color:red;font-size:20px;">The Imperators: The Imperators are the emodiment of the image of Vampires as aristocrats. They have claimed rulership over Vampire-kind since time immemorial and their powers reflect their tendency towards leadership. They can control the minds of those with weaker wills and project an aura to inspire their followers. However this belief in their rulership means challanges to their authority almost always risk them losing control.</a>
+</p>
+
+<button type="button" onclick="document.getElementById('imperial').style.display='block'">What are The Imperators?</button>
+
+<p>
+<a style="font-family:arial;color:red;font-size:20px;">So... what are you?</a>
+</p>
+
+<p>
+<button id="beast" onclick="setBestia()">I am one of The Bestia.</button>
+<button id="night" onclick="setNoctis()">I am one of The Noctis.</button>
+<button id="death" onclick="setMortem()">I am one of The Mortem.</button>
+<button id="queen" onclick="setImperator()">I am one of The Imperators.</button>
+</p>
+
+<p>
+<a style="font-family:arial;color:red;font-size:20px;">You are one of the...</a>
+</p>
+
+<p id="choice" style="font-family:arial;color:red;font-size:20px;"></p>
+
+<button id="myBtn" onclick="myChoice()">Display your choice</button>
+
+<p>
+<a style="font-family:arial;color:red;font-size:20px;">Now you're Vampire is made. Are you ready to take a step into the world of shadows that lies beneath Las Vegas?</a>
+</p>
+
+<p>
+<a style="font-family:arial;color:red;font-size:20px;" href="HotelPartOne.html">Be born into the night...</a>
+</p>
+
+<audio controls autoplay>
+ <source src="Pages/Music/CharacterCreation.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> 
+
+<!--The script below sets the players Bloodline based on their choice and makes it so other pages can use this. This is important as these choices will impact the narrative in the future.-->
+<script>
+var bloodlinechoice;
+
+function setBestia() {
+  bloodlinechoice = "Bestia";
+  localStorage.setItem("Bloodline", "Bestia");
+}
+
+function setNoctis() {
+  bloodlinechoice = "Noctis";
+  localStorage.setItem("Bloodline", "Noctis");
+}
+
+function setMortem() {
+  bloodlinechoice = "Mortem";
+  localStorage.setItem("Bloodline", "Mortem");
+}
+
+function setImperator() {
+  bloodlinechoice = "Imperator";
+  localStorage.setItem("Bloodline", "Imperator");
+}
+
+function myChoice() {
+  document.getElementById("choice").innerHTML = bloodlinechoice;
+}
+
+</script>
+
+<script src="Scripts/Game.js"></script>
+</body>
+</html>

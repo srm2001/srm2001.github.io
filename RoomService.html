@@ -1,0 +1,41 @@
+<html>
+
+<head>
+<title>Shadows over Las Vegas</title>
+<link rel="stylesheet" type="text/css" href="Pages/CSS/style.css"/>
+</head>
+
+<body style="background-color:black;">
+
+<h1 style="font-family:arial;color:red;font-size:40px;text-align:center;">Chapter 1 - Awakening - Person at the door</h1>
+
+<p> 
+<a style="font-family:arial;color:red;font-size:20px;">You cautiously approach the door. The hunger still growls in your stomach and your mouth waters for... something. You're not sure what but you're starving for something other than just normal food or water...</a>
+</p>
+
+<p> 
+<a style="font-family:arial;color:red;font-size:20px;">As you open the door a young woman smiles at you. She couldn't be less than 23 years old at most. "Room Service." She smiles at you in a warm manner and suddenly the hunger inside seems almost overwhelming...</a>
+</p>
+
+<p> 
+<a style="font-family:arial;color:red;font-size:20px;">What will you do?</a>
+</p>
+
+<p id="feed">
+<a style="font-family:arial;color:red;font-size:20px;" href="Fed.html">Give in to the hunger</a>
+</p>
+
+<p id="resist">
+<a style="font-family:arial;color:red;font-size:20px;" href="Resisted.html">Stay in control</a>
+</p>
+
+<script>
+//Due to the weakness of the Bestia those that chose them at character creation can't choose not to feed.
+if (localStorage.getItem("Bloodline") === "Bestia") {
+	document.getElementById('resist').style.display='none';
+	}
+</script>
+
+<script src="Scripts/Game.js"></script>
+</body>
+</html>

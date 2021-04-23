@@ -1,0 +1,117 @@
+<html>
+
+<head>
+<title>Shadows over Las Vegas</title>
+<link rel="stylesheet" type="text/css" href="Pages/CSS/style.css"/>
+</head>
+
+<body style="background-color:black;">
+
+<h1 style="font-family:arial;color:red;font-size:40px;text-align:center;">Character Creation - Part 1: Backgrounds</h1>
+
+<img src="Images/backgrounds.jpg" alt="Backgrounds" class="center" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
+
+<script>
+//This script allows you to name the character and makes the name avilable to other pages
+var char_name = prompt("Please enter your characters chosen name:", "Type here");
+alert("Your characters name is " + char_name);
+localStorage.setItem("Name", char_name);
+</script>
+
+<p> 
+<a style="font-family:arial;color:red;font-size:20px;">Your character in this game will be a unique individual like you based on a number of factors. One of those factors is their background. Their Origin. Who they are and why they are in Las Vegas.</a>
+</p>
+<p>
+<a style="font-family:arial;color:red;font-size:20px;">These backgrounds are: The Fixer, The Influencer, The Bounty Hunter and The Detective. Each has their own unique skills that impact what choices are available or will be successful in the narrative.</a>
+</p>
+
+<p id="fixer" style="display:none">
+<a style="font-family:arial;color:red;font-size:20px;">The Fixer: The Fixer is a criminal who is an expert in assasination, framing people, larceny and spying. Their skill set has attracted the notice of some very wealthy employers and other individuals. They are also very knowledgeable about the criminal element of Las Vegas.</a>
+</p>
+
+<button type="button" onclick="document.getElementById('fixer').style.display='block'">Who is The Fixer?</button>
+
+<p id="influencer" style="display:none">
+<a style="font-family:arial;color:red;font-size:20px;">The Influencer: The Influncer is a fairly mid-level social media style who has the potential to break into the big leagues with the right support. They are highly skilled with working a crowd, manipulation and have a natural charisma. These skills will come in handy in the nights ahead.</a>
+</p>
+
+<button type="button" onclick="document.getElementById('influencer').style.display='block'">Who is The Influencer?</button>
+
+<p id="bountyhunter" style="display:none">
+<a style="font-family:arial;color:red;font-size:20px;">The Bounty Hunter: The Bounty Hunter is a person who stradles the line of legality with their job. They are highly skilled at tracking, weaponry of all kinds and stealth. They focus on the hunt at hand and always get the job done.</a>
+</p>
+
+<button type="button" onclick="document.getElementById('bountyhunter').style.display='block'">Who is The Bounty Hunter?</button>
+
+<p id="detective" style="display:none">
+<a style="font-family:arial;color:red;font-size:20px;">The Detective: The Detective has a strong sense of justice though they sometimes bend the rules to get justice done. They are highly skilled at investigation, hacking and with their sidearm. They are also highly charismatic and capable of talking witnesses around through a variety of methods. These nights they've brushed too close to the hidden world of the Vampires and someone has taken notice...</a>
+</p>
+
+<button type="button" onclick="document.getElementById('detective').style.display='block'">Who is The Detective?</button>
+
+<p>
+<a style="font-family:arial;color:red;font-size:20px;">So... who are you?</a>
+</p>
+
+<p>
+<button id="fixer" onclick="setFixer()">I am the Fixer.</button>
+<button id="influencer" onclick="setInfluencer()">I am the Influencer.</button>
+<button id="bountyhunter" onclick="setHunter()">I am the Bounty Hunter.</button>
+<button id="detective" onclick="setDetective()">I am the Detective.</button>
+</p>
+
+<p>
+<a style="font-family:arial;color:red;font-size:20px;">You are the...</a>
+</p>
+
+<p id="choice" style="font-family:arial;color:red;font-size:20px;"></p>
+
+<button id="myBtn" onclick="myChoice()">Display your choice</button>
+
+<p>
+<a style="font-family:arial;color:red;font-size:20px;">Now... which variety of Vampire is your character?</a>
+</p>
+
+<p>
+<a style="font-family:arial;color:red;font-size:20px;" href="Bloodlines.html">What is your bloodline?</a>
+</p>
+
+<audio controls autoplay>
+ <source src="Pages/Music/CharacterCreation.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> 
+
+<!--The script below takes the background the player chose and stores it. This is important as it'll impact certain parts of the narrative in future.-->
+<script>
+var backgroundchoice;
+
+function setFixer() {
+  backgroundchoice = "Fixer";
+  localStorage.setItem("Background", "Fixer");
+}
+
+function setInfluencer() {
+  backgroundchoice = "Influencer";
+  localStorage.setItem("Background", "Influencer");
+}
+
+function setHunter() {
+  backgroundchoice = "Hunter";
+  localStorage.setItem("Background", "Hunter");
+}
+
+function setDetective() {
+  backgroundchoice = "Detective";
+  localStorage.setItem("Background", "Detective");
+}
+
+function myChoice() {
+  document.getElementById("choice").innerHTML = backgroundchoice;
+}
+
+</script>
+
+<script src="Scripts/Game.js"></script>
+
+</body>
+</html>
