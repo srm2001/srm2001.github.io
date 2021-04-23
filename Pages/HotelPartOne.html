@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<title>Shadows over Las Vegas</title>
+<link rel="stylesheet" type="text/css" href="Pages/CSS/style.css"/>
+</head>
+
+<body style="background-color:black;">
+
+<h1 style="font-family:arial;color:red;font-size:40px;text-align:center;">Chapter 1 - Awakening</h1>
+
+<img src="Images/Bedroom.jpg" alt="Bedroom" class="center" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
+
+<p> 
+<a style="font-family:arial;color:red;font-size:20px;"> The room is quiet aside from the faint buzzing of the flourescent lights in the ceiling. In the bed a cold corpse lies... until it jolts and inhales sharply.</a>
+</p>
+<p>
+<a style="font-family:arial;color:red;font-size:20px;">You awaken to the painful feeling of pure hunger in your stomach. Looking around wildly you're in the same hotel room as last night... but how you got here and what happened to you seems to be a hazy memory. You remember...</a>
+</p>
+
+<p id="fixer" style="display:none">
+<a style="font-family:arial;color:red;font-size:20px;">You came here for a job. Someone was willing to pay big bucks to have a snitch not reach their court date and you were only too happy to agree to meet after your contacts verified the job was legit. Did something go wrong? Maybe you were drugged...</a>
+</p>
+
+<p id="influencer" style="display:none">
+<a style="font-family:arial;color:red;font-size:20px;">You'd been told by your agent that a big company wanted to sponsor you. It would be a huge leap forward in your career and thus, after everything was verified, you agreed to the meeting. Something must have gone wrong though...</a>
+</p>
+
+<p id="hunter" style="display:none">
+<a style="font-family:arial;color:red;font-size:20px;">You'd been tracking your target for several days now and your last intel had him as being hold up in this hotel. After a fairly easy inflitration the last thing you remembered was picking the lock. Had you been anticipated somehow?</a>
+</p>
+
+<p id="detective" style="display:none">
+<a style="font-family:arial;color:red;font-size:20px;">The woman you suspected of being involved in the rumoured human traficking out of Las Vegas was last seen renting a room here so you'd come to poke your nose into it. A bit of talking with the maids got you the room number of your suspect and you closed in. However... the door was unlocked when you arrived... what had happened after was blank for you.</a>
+</p>
+
+<p>
+<a style="font-family:arial;color:red;font-size:20px;">Maybe you should look around the room... see what can be found?</a>
+<p>
+
+<p>
+<a style="font-family:arial;color:red;font-size:20px;" href="Nightstand.html">Check the nightstand.</a>
+</p>
+
+<p>
+<a style="font-family:arial;color:red;font-size:20px;" href="Dresser.html">Check the dresser.</a>
+</p>
+
+<!--The script below gives you a unique "intro" based on the background you chose-->
+<script>
+
+if (localStorage.getItem("Background") === "Fixer") {
+	document.getElementById('fixer').style.display='block';
+	}
+
+if (localStorage.getItem("Background") === "Influencer") {
+	document.getElementById('influencer').style.display='block';
+	}
+	
+if (localStorage.getItem("Background") === "Hunter") {
+	document.getElementById('hunter').style.display='block';
+	}
+	
+if (localStorage.getItem("Background") === "Detective") {
+	document.getElementById('detective').style.display='block';
+	}
+
+</script>
+
+<script src="Scripts/Game.js"></script>
+</body>
+</html>

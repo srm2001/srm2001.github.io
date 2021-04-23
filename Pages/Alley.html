@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<title>Shadows over Las Vegas</title>
+<link rel="stylesheet" type="text/css" href="Pages/CSS/style.css"/>
+</head>
+
+<body style="background-color:black;">
+
+<h1 style="font-family:arial;color:red;font-size:40px;text-align:center;">Chapter 2 - The Streets - The Alley</h1>
+
+<img src="Images/Alley.jpg" alt="Alley" class="center" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
+
+<a style="font-family:arial;color:red;font-size:20px;" href="CharacterSheet.html">See Character Details</a>
+
+<p> 
+<a style="font-family:arial;color:red;font-size:20px;">Your throat is on fire as you stumble into the alley and your head is pounding from the mental effort it took to not attack anyone. Unfortunatly fate was not on your side today in your efforts to not hurt anyone as the scent of freshly spilled blood flooded your nostrils.</a>
+</p>
+
+<p> 
+<a style="font-family:arial;color:red;font-size:20px;">You're not quite sure what happened as your gaze snapped to the bleeding drunk who cut himself on his broken bottle. One moment you were staring at him and the next moment you had him shoved against the wall as you bury your fangs in his neck with a savage snarl. You gulp down the red liquid and ponder for a moment why you ever resisted feeding in the hotel as the fresh blood spilled down your throat. It was the best experience you'd ever had. Better than alcohol, better than drugs or a well made meal... hell, better than good sex.</a>
+</p>
+
+<p> 
+<a style="font-family:arial;color:red;font-size:20px;">Stepping away from the corpse as the haze lifts from your mind you feel panic bubble up inside of you. You'd just killed a man in the middle of a city street and then drained him of his blood...</a>
+</p>
+
+<p> 
+<a style="font-family:arial;color:red;font-size:20px;">It took a few minutes to get your thoughts in order as your robotically cleaned yourself up and started heading towards the streets. You need answers... and the only way you'll be able to find them is to follow that clue you had...</a>
+</p>
+
+<a id="rose" style="font-family:arial;color:red;font-size:20px;display:none;" href="Casino.html">To the Bleeding Rose Casino!</a>
+
+<a id="morgue" style="font-family:arial;color:red;font-size:20px;" href="Morgue.html">To Giovanni & Sons Morgue.</a>
+
+<script>
+
+//Set the Hunger to One due to feeding and Stains to One due to having committed an act of murder
+localStorage.setItem("Hunger", "One");
+localStorage.setItem("Stains", "One");
+
+//This effects what options you see for where to go based on what clue you found in the hotel.
+if (localStorage.getItem("Clue") === "Casino") {
+	document.getElementById('morgue').style.display='none';
+	document.getElementById('rose').style.display='block';
+	}
+
+</script>

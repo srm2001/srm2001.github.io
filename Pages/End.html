@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<title>Shadows over Las Vegas</title>
+<link rel="stylesheet" type="text/css" href="Pages/CSS/style.css"/>
+</head>
+
+<body style="background-color:black;">
+
+<h1 style="font-family:arial;color:red;font-size:40px;text-align:center;">Thank you!</h1>
+
+<img src="Images/shadowsoverlasvegas.jpg" alt="End" class="center" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
+
+<p>
+<a style="font-family:arial;color:red;font-size:20px;">Thank you for playing my game. I'm sorry it wasn't able to go beyond this point but I ran out of time.</a>
+</p>
+
+<p>
+<a style="font-family:arial;color:red;font-size:20px;">I hope it was an enjoyable experience and maybe I'll expand it one day.</a>
+</p>
+
+<p>
+<a style="font-family:arial;color:red;font-size:20px;">Characters Stats at the end of the game:</a>
+</p>
+
+<p>
+<a style="font-family:arial;color:red;font-size:20px;">Name: </a>
+<a style="font-family:arial;color:red;font-size:20px;" id="name"></a>
+</p>
+<p>
+<a style="font-family:arial;color:red;font-size:20px;">Background: </a>
+<a style="font-family:arial;color:red;font-size:20px;" id="who"></a>
+</p>
+<p>
+<a style="font-family:arial;color:red;font-size:20px;">Bloodline: </a>
+<a style="font-family:arial;color:red;font-size:20px;" id="what"></a>
+</p>
+<p>
+<a style="font-family:arial;color:red;font-size:20px;">Hunger: </a>
+<a style="font-family:arial;color:red;font-size:20px;" id="hunger"></a>
+</p>
+<p>
+<a style="font-family:arial;color:red;font-size:20px;">Stains on your Humanity: </a>
+<a style="font-family:arial;color:red;font-size:20px;" id="soul"></a>
+</p>
+
+<script>
+document.getElementById("name").innerHTML = localStorage.getItem("Name");
+document.getElementById("who").innerHTML = localStorage.getItem("Background");
+document.getElementById("what").innerHTML = localStorage.getItem("Bloodline");
+document.getElementById("hunger").innerHTML = localStorage.getItem("Hunger");
+document.getElementById("soul").innerHTML = localStorage.getItem("Stains");
+</script>
+
+</body>
+</html>
